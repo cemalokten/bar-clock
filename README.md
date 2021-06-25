@@ -19,6 +19,11 @@ Click the page to change from cool purple to warm red.
 - Stacking CSS classes/id's
 - Divide up page using CSS `grid` along with `flex`
 
+### 🦺 Testing
+- Works on latest version of Firefox, Chrome and Edge
+- Mobile only works in landscape
+- Further testing required
+
 ### ⏳ Future improvements
 - [ ] Different time-zones
 - [ ] More colours
@@ -32,7 +37,3 @@ Click the page to change from cool purple to warm red.
 
 ![Bar Clock Warm Red](images/bar-clock-2.png)
 
-### 🦺 Testing
-- Works on latest version of Firefox, Chrome and Edge
-- Mobile only works in landscape
-- Further testing required
