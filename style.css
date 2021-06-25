@@ -1,0 +1,167 @@
+:root {
+	--bg-color: #1e004e;
+	--block-color: #632aeb;
+	--blank-block-color: rgb(66, 0, 151);
+}
+
+html {
+	font-size: 2.8vh;
+	color: var(--block-color);
+	font-family: 'Lab Mono Web';
+	background-color: var(--bg-color);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family: 'Lab Mono Web';
+	src: url('labmono-regular-web.woff2') format('woff2'), url('labmono-regular-web.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+main {
+	height: 100vh;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-basis: 0;
+	justify-content: space-between;
+}
+
+section {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.hour--block,
+.hour--block--blank {
+	pointer-events: none;
+	position: relative;
+	width: calc((100% / 24));
+	height: calc(100vh /3);
+	background-color: var(--block-color);
+	border-right: solid 8px var(--bg-color);
+	border-top: solid 4px var(--bg-color);
+	border-bottom: solid 8px var(--bg-color);
+}
+
+.minute--block,
+.minute--block--blank {
+	pointer-events: none;
+	position: relative;
+	width: calc(100% / 60);
+	height: calc(100vh /3);
+	background-color: var(--block-color);
+	border-right: solid 8px var(--bg-color);
+	border-top: solid 4px var(--bg-color);
+	border-bottom: solid 4px var(--bg-color);
+}
+
+.second--block,
+.second--block--blank {
+	pointer-events: none;
+	position: relative;
+	width: calc(100% / 60);
+	height: calc(100vh /3);
+	background-color: var(--block-color);
+	border-right: solid 8px var(--bg-color);
+	border-top: solid 8px var(--bg-color);
+	border-bottom: solid 4px var(--bg-color);
+}
+
+.hour--block--blank,
+.second--block--blank,
+.minute--block--blank {
+	pointer-events: none;
+	background-color: var(--blank-block-color);
+}
+
+.text {
+	transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	display: inline;
+	width: calc(100vh / 3);
+	text-align: center;
+}
+
+.text--box {
+	height: calc(100vh / 3);
+	align-content: space-around;
+	align-items: center;
+	display: flex;
+}
+
+#seconds,
+#minutes,
+#hours {
+	pointer-events: none;
+	z-index: 20;
+	height: calc(100vh /3);
+}
+
+#seconds--fill {
+	pointer-events: none;
+	z-index: 1;
+	height: calc(100vh / 3);
+	position: absolute;
+	width: calc((100vw / 24) * 23);
+	position: absolute;
+	top: 0;
+	left: calc(100vw / 24);
+}
+
+#minutes--fill {
+	pointer-events: none;
+	margin-top: calc(100vh / 3);
+	z-index: 1;
+	height: calc(100vh / 3);
+	position: absolute;
+	width: calc((100vw / 24) * 23);
+	position: absolute;
+	top: 0;
+	left: calc(100vw / 24);
+}
+
+#hours--fill {
+	pointer-events: none;
+	margin-top: calc(100vh / 3 * 2);
+	z-index: 1;
+	height: calc(100vh / 3);
+	width: calc((100vw / 24) * 23);
+	position: absolute;
+	top: 0;
+	left: calc(100vw / 24);
+}
+
+.parent {
+	display: grid;
+	grid-template-columns: calc(100vw / 24) 24fr;
+	grid-template-rows: repeat(3, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+
+.div1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	grid-area: 1 / 1 / 6 / 2;
+}
+.div2 {
+	grid-area: 1 / 2 / 2 / 3;
+}
+.div3 {
+	grid-area: 2 / 2 / 3 / 3;
+}
+.div4 {
+	grid-area: 3 / 2 / 4 / 3;
+}
