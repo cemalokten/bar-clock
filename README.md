@@ -20,11 +20,11 @@ Click the page to change from cool purple to warm red.
 - Divide up page using CSS `grid` along with `flex`
 
 ### ⏳ Future improvements
-[ ] Different time-zones
-[ ] More colours
-[ ] Refine look
-[ ] Information section about the project
-[ ] Mobile version
+- [ ] Different time-zones
+- [ ] More colours
+- [ ] Refine look
+- [ ] Information section about the project
+- [ ] Mobile version
 
 ### 👀 Screenshots
 
